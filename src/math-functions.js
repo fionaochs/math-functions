@@ -88,12 +88,14 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
+
     const numberOne = sumArr[0];
     const numberTwo = sumArr[1];
     const numberThree = sumArr[2];
 
     const sumTwoNumbers = sum(numberOne, numberTwo);
     const sumThree = sum(sumTwoNumbers[0], numberThree);
+
 
     var result = [
         sumThree[0],
@@ -124,7 +126,18 @@ you may continue to use the + operator for string concatenation.
 */
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
+    const numberOne = multArr[0];
+    const numberTwo = multArr[1];
+    const numberThree = multArr[2];
 
+    const multiTwoNumbers = multiply(numberOne, numberTwo);
+    const multiThree = multiply(multiTwoNumbers[0], numberThree);
+    
+    var result = [
+        multiThree[0],
+        "The numbers " + multArr[0] + "," + multArr[1] + "," + multArr[2] + " have a product of " + multiThree[0] + ".",
+    ];
+    return result;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -145,8 +158,18 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    
+    let multi = 1;
+    for(var i = 0; i < dynamicArray.length; i++){
+        multi *= dynamicArray[i];
+    };
+    var result = [
+        multi,
+        `The numbers ${dynamicArray} have a product of ${multi}.`
+    ];
+    return result;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // You're done! Submit the link to the repo following the instructions in Canvas.
+
