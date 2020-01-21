@@ -88,7 +88,7 @@ to use the + operator for string concatenation.
 */
 
 export function sumArrayWithThreeNumbers(sumArr) {
-    let sum = 0;
+    slet sum = 0;
     sumArr = [2, 3, 4];
     for(var i = 0; i < sumArr.length; i++){
         sum += sumArr[i];
